@@ -6,9 +6,23 @@ let isHtmlBoxExpanded = false;
 let isCssBoxExpanded = false;
 let isJsBoxExpanded = false;
 
-document.getElementById("html-expand-btn").addEventListener("click", () => {
-    console.log(htmlBox.classList[1]);
+const codeEditor = document.querySelectorAll(".code-editor");
 
+for (let editor of codeEditor) {
+    editor.addEventListener("input", () => {
+        const htmlCode = document.getElementById("html-code").value;
+        const cssCode = document.getElementById("css-code").value;
+        const jsCode = document.getElementById("js-code").value;
+        const output = document.getElementById("output");
+
+        output.contentDocument.body.innerHTML =
+            htmlCode + "<style>" + cssCode + "</style>";
+
+        output.contentWindow.eval(jsCode);
+    });
+}
+
+document.getElementById("html-expand-btn").addEventListener("click", () => {
     if (cssBox.classList[1] === "animate-code-box") {
         cssBox.classList.remove("animate-code-box");
         isCssBoxExpanded = false;

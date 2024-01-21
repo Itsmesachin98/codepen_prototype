@@ -14,14 +14,14 @@
                         <i class="fa-brands fa-html5"></i>
                         Html
                     </label>
-                    <div id="html-expand-btn">
+                    <div class="expand-btn" id="html-expand-btn">
                         <i
                             class="fa-solid fa-up-right-and-down-left-from-center"
                         ></i>
                     </div>
                 </div>
                 <div class="code-container">
-                    <textarea></textarea>
+                    <textarea class="code-editor" id="html-code"></textarea>
                 </div>
             </div>
             <div class="code-box" id="css">
@@ -30,14 +30,14 @@
                         <i class="fa-brands fa-css3-alt"></i>
                         CSS
                     </label>
-                    <div id="css-expand-btn">
+                    <div class="expand-btn" id="css-expand-btn">
                         <i
                             class="fa-solid fa-up-right-and-down-left-from-center"
                         ></i>
                     </div>
                 </div>
                 <div class="code-container">
-                    <textarea></textarea>
+                    <textarea class="code-editor" id="css-code"></textarea>
                 </div>
             </div>
             <div class="code-box" id="js">
@@ -46,18 +46,20 @@
                         <i class="fa-brands fa-js"></i>
                         JavaScript
                     </label>
-                    <div id="js-expand-btn">
+                    <div class="expand-btn" id="js-expand-btn">
                         <i
                             class="fa-solid fa-up-right-and-down-left-from-center"
                         ></i>
                     </div>
                 </div>
                 <div class="code-container">
-                    <textarea></textarea>
+                    <textarea class="code-editor" id="js-code"></textarea>
                 </div>
             </div>
         </section>
-        <section class="pane bottom-pane"></section>
+        <section class="pane bottom-pane">
+            <iframe id="output" frameborder="0"></iframe>
+        </section>
 
         <script
             src="https://kit.fontawesome.com/0613a24a02.js"
